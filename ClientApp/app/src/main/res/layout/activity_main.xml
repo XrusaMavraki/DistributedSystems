@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.p3130107.myapplication.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/minLat"
+                    android:layout_width="150dp"
+                    android:hint="minLatitude" />
+
+                <EditText
+                    android:id="@+id/maxLat"
+                    android:layout_width="150dp"
+                    android:hint="maxLatitude" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/minLong"
+                    android:layout_width="150dp"
+                    android:hint="minLongtitude" />
+
+                <EditText
+                    android:id="@+id/maxLong"
+                    android:layout_width="150dp"
+                    android:hint="maxLongtitude" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/minDuration"
+                    android:layout_width="150dp"
+                    android:hint="minDuration" />
+
+                <EditText
+                    android:id="@+id/maxDuration"
+                    android:layout_width="150dp"
+                    android:hint="maxDuration" />
+            </TableRow>
+        </TableLayout>
+
+        <EditText
+            android:id="@+id/amountOfTopResults"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/table"
+            android:layout_centerHorizontal="true"
+            android:hint="topK" />
+
+        <LinearLayout
+            android:id="@+id/topButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/amountOfTopResults">
+
+            <Button
+                android:id="@+id/getResults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get Results"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/openMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Open Map"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/reducerFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topButtons"
+            android:layout_centerHorizontal="true"
+            android:text="Reducer: Waiting..."/>
+
+        <LinearLayout
+            android:id="@+id/feedbackLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/reducerFeedback"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/feedbackLayout">
+        <Button
+            android:id="@+id/settingsBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:text="Settings"/>
+        <Button
+            android:id="@+id/insertBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:textAllCaps="false"
+            android:text="New Checkin"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

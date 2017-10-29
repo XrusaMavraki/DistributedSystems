@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.evasler.clientapp.settings">
+
+    <LinearLayout
+        android:id="@+id/reducerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reducer IP:"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/reducerIP"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/insertServerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reducerLayout"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="InsertServer IP:"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/insertServerIP"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/amountOfMappersLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/insertServerLayout"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount of Mappers:"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/amountOfMappers"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/updateBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textAllCaps="false"
+            android:text="Update"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/mapperScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_below="@+id/amountOfMappersLayout"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/mapperLinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/applyBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mapperScroll"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:text="Apply"/>
+
+</RelativeLayout>
